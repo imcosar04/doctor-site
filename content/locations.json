@@ -1,0 +1,23 @@
+{
+  "locations": [
+    {
+      "name": "Main Medical Center",
+      "address": "123 Medical Center Drive",
+      "city": "City",
+      "state": "State",
+      "zipCode": "12345",
+      "phone": "(555) 123-4567",
+      "hours": "Monday - Friday: 8:00 AM - 5:00 PM\nSaturday: 9:00 AM - 1:00 PM\nSunday: Closed"
+    },
+    {
+      "name": "Downtown Clinic",
+      "address": "456 Main Street",
+      "city": "City",
+      "state": "State",
+      "zipCode": "12345",
+      "phone": "(555) 234-5678",
+      "hours": "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 2:00 PM\nSunday: Closed"
+    }
+  ]
+}
+

@@ -1,0 +1,25 @@
+{
+  "resources": [
+    {
+      "title": "New Patient Information",
+      "description": "Learn what to expect during your first visit and how to prepare for your appointment.",
+      "link": "#"
+    },
+    {
+      "title": "Insurance & Billing",
+      "description": "Information about accepted insurance plans, payment options, and billing procedures.",
+      "link": "#"
+    },
+    {
+      "title": "Patient Portal",
+      "description": "Access your medical records, test results, and communicate with your care team online.",
+      "link": "#"
+    },
+    {
+      "title": "Medication Refills",
+      "description": "Request prescription refills and manage your medications through our secure portal.",
+      "link": "#"
+    }
+  ]
+}
+

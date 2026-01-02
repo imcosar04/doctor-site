@@ -1,0 +1,52 @@
+{
+  "managements": [
+    {
+      "title": "Nerve compression",
+      "description": "A condition where nerves are compressed or pinched, often causing pain, numbness, or weakness in the affected area.",
+      "image": "/images/clinic/spine.avif",
+      "category": "spine"
+    },
+    {
+      "title": "Myelopathy",
+      "description": "A disorder of the spinal cord caused by compression or damage, leading to neurological symptoms and functional impairment.",
+      "image": "/images/clinic/spine.avif",
+      "category": "spine"
+    },
+    {
+      "title": "Cervical spine surgery",
+      "description": "Surgical procedures performed on the cervical (neck) region of the spine to address various conditions and restore function.",
+      "image": "/images/clinic/spine.avif",
+      "category": "spine"
+    },
+    {
+      "title": "Lumbar spine surgery",
+      "description": "Surgical interventions targeting the lumbar (lower back) region to treat pain, instability, and other spinal conditions.",
+      "image": "/images/clinic/spine.avif",
+      "category": "spine"
+    },
+    {
+      "title": "Thoracic spine surgery",
+      "description": "Specialized surgical procedures for the thoracic (mid-back) spine region, addressing complex conditions and deformities.",
+      "image": "/images/clinic/spine.avif",
+      "category": "spine"
+    },
+    {
+      "title": "Scoliosis, Kyphosis, and Spinal Deformity",
+      "description": "Comprehensive treatment for spinal curvature disorders including scoliosis, kyphosis, and other complex spinal deformities.",
+      "image": "/images/clinic/spine.avif",
+      "category": "spine"
+    },
+    {
+      "title": "Radiculopathy - Sciatica",
+      "description": "Treatment for radiculopathy and sciatica, conditions involving nerve root compression causing pain, tingling, and weakness along the nerve pathway.",
+      "image": "/images/clinic/spine.avif",
+      "category": "spine"
+    },
+    {
+      "title": "Same day surgery",
+      "description": "Advanced minimally invasive surgical procedures that allow patients to return home on the same day as their surgery.",
+      "image": "/images/clinic/spine.avif",
+      "category": "spine"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "publications": [
+    {
+      "title": "Advances in Preventive Medicine",
+      "authors": ["Dr. John Doe", "Dr. Jane Smith"],
+      "journal": "Medical Research Journal",
+      "date": "2024",
+      "abstract": "This publication explores recent advances in preventive medicine and their impact on patient outcomes.",
+      "link": "#"
+    },
+    {
+      "title": "Chronic Disease Management Strategies",
+      "authors": ["Dr. Jane Smith"],
+      "journal": "Healthcare Today",
+      "date": "2023",
+      "abstract": "A comprehensive review of effective strategies for managing chronic diseases in primary care settings.",
+      "link": "#"
+    }
+  ]
+}
+
