@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -19,7 +17,13 @@ export async function POST(request: NextRequest) {
 
     // Send email to doctor
     try {
-      await resend.emails.send({
+      const apiKey = process.env.RESEND_API_KEY
+      if (!apiKey) {
+        console.error('RESEND_API_KEY is not set')
+        // Continue without sending email, but log the error
+      } else {
+        const resend = new Resend(apiKey)
+        await resend.emails.send({
         from: 'Consultation Form <onboarding@resend.dev>', // You'll need to verify your domain with Resend
         to: 'cosarmd@gmail.com',
         subject: `New Consultation Request from ${firstName} ${lastName}`,
@@ -39,8 +43,9 @@ export async function POST(request: NextRequest) {
             </p>
           </div>
         `,
-        reply_to: email,
-      })
+          reply_to: email,
+        })
+      }
     } catch (emailError) {
       console.error('Error sending email:', emailError)
       // Still return success to user, but log the error
