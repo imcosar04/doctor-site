@@ -32,47 +32,47 @@ export default function AboutPage() {
                 />
               </div>
               <div className="text-center">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  Murat Cosar, MD PhD
+                <h2 className="text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '-0.01em' }}>
+                  Murat Cosar, MD PhD FACS
                 </h2>
-                <p className="text-lg text-gray-700 mb-4">Neurosurgeon</p>
-                <p className="text-gray-700 leading-relaxed text-sm mb-6">
+                <p className="text-lg text-gray-700 mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>Neurosurgeon</p>
+                <p className="text-gray-700 leading-relaxed text-sm mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
                   Dr. Murat Cosar is a neurosurgeon with more than twenty years of experience. He is board-certified to practice medicine in Turkey, New York, and New Mexico, and holds a PhD in neuroanatomy.
                 </p>
                 
                 {/* Specialties */}
                 <div className="text-left">
-                  <h3 className="font-semibold text-gray-900 mb-3">Specialties</h3>
+                  <h3 className="font-semibold text-gray-900 mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>Specialties</h3>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      <p className="text-gray-700 text-sm">Spine</p>
+                      <p className="text-gray-700 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>Spine</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      <p className="text-gray-700 text-sm">Brain Tumors</p>
+                      <p className="text-gray-700 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>Brain Tumors</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      <p className="text-gray-700 text-sm">Cerebrovascular</p>
+                      <p className="text-gray-700 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>Cerebrovascular</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      <p className="text-gray-700 text-sm">Peripheral Nerve</p>
+                      <p className="text-gray-700 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>Peripheral Nerve</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      <p className="text-gray-700 text-sm">Trauma (Spine / Cranial)</p>
+                      <p className="text-gray-700 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>Trauma (Spine / Cranial)</p>
                     </div>
                   </div>
                 </div>
@@ -83,10 +83,10 @@ export default function AboutPage() {
           {/* Right Side - Full Biography */}
           <div className="lg:col-span-2">
             <div className="bg-white border-2 border-blue-400 p-8 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
-                Dr. Murat Cosar, MD, PhD
+              <h2 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '-0.02em' }}>
+                Dr. Murat Cosar, MD, PhD, FACS
               </h2>
-              <div className="text-gray-700 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <div className="text-gray-700 leading-relaxed text-lg" style={{ fontFamily: "'Crimson Text', serif" }}>
                 <p className="mb-4">
                   Murat Coşar is a Turkish-American physician born in Giresun, Turkey. He graduated from Istanbul University Medical School in 1999 and completed his neurosurgery residency in 2005. Following residency, he joined the UCLA Neurosurgery and Spine Program for a six-month postdoctoral research fellowship.
                 </p>

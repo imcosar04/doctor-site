@@ -29,18 +29,17 @@ export default function Navbar() {
       {/* Top Bar - Logo and Schedule Button (Static) */}
       <div className="bg-gray-50 border-b-2 border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-5">
+          <div className="flex justify-between items-center py-3">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
                 <Image
                   src="/images/logos/MuratCosarPhysician.png"
                   alt="Dr. Murat Cosar Physician Logo"
-                  width={220}
-                  height={80}
-                  className="h-16 w-auto"
+                  width={300}
+                  height={110}
+                  className="h-20 md:h-24 w-auto object-contain"
                   priority
-                  unoptimized
                 />
               </Link>
             </div>
@@ -49,7 +48,7 @@ export default function Navbar() {
             <div className="flex items-center">
               <Link
                 href="#booking"
-                className="px-8 py-3 bg-yellow-400 text-gray-900 border-2 border-yellow-400 font-semibold hover:bg-yellow-500 transition-colors text-base"
+                className="px-5 py-4 bg-yellow-400 text-gray-900 border-2 border-yellow-400 font-semibold hover:bg-yellow-500 transition-colors text-base"
               >
                 Schedule Consultation
               </Link>
