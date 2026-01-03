@@ -16,15 +16,19 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email to doctor
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      console.error('RESEND_API_KEY is not set in environment variables')
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      )
+    }
+
     try {
-      const apiKey = process.env.RESEND_API_KEY
-      if (!apiKey) {
-        console.error('RESEND_API_KEY is not set')
-        // Continue without sending email, but log the error
-      } else {
-        const resend = new Resend(apiKey)
-        await resend.emails.send({
-        from: 'Consultation Form <onboarding@resend.dev>', // You'll need to verify your domain with Resend
+      const resend = new Resend(apiKey)
+      const emailResult = await resend.emails.send({
+        from: 'onboarding@resend.dev',
         to: 'cosarmd@gmail.com',
         subject: `New Consultation Request from ${firstName} ${lastName}`,
         html: `
@@ -33,23 +37,31 @@ export async function POST(request: NextRequest) {
               New Consultation Request
             </h2>
             <div style="background-color: #f9fafb; padding: 20px; border-radius: 8px; margin: 20px 0;">
-              <p style="margin: 10px 0;"><strong>Name:</strong> ${firstName} ${lastName}</p>
+              <p style="margin: 10px 0;"><strong>Name:</strong> ${firstName.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')} ${lastName.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>
               <p style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
               <p style="margin: 10px 0;"><strong>Phone:</strong> <a href="tel:${phone}">${phone}</a></p>
-              ${message ? `<p style="margin: 10px 0;"><strong>Message:</strong></p><p style="margin: 10px 0; padding: 10px; background-color: white; border-left: 3px solid #1e40af;">${message.replace(/\n/g, '<br>')}</p>` : ''}
+              ${message ? `<p style="margin: 10px 0;"><strong>Message:</strong></p><p style="margin: 10px 0; padding: 10px; background-color: white; border-left: 3px solid #1e40af;">${message.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/\n/g, '<br>')}</p>` : ''}
             </div>
             <p style="color: #6b7280; font-size: 12px; margin-top: 20px;">
               This email was sent from the consultation form on your website.
             </p>
           </div>
         `,
-          reply_to: email,
-        })
-      }
-    } catch (emailError) {
+        reply_to: email,
+      })
+      
+      console.log('Email sent successfully:', emailResult)
+    } catch (emailError: any) {
       console.error('Error sending email:', emailError)
-      // Still return success to user, but log the error
-      // You might want to handle this differently based on your needs
+      console.error('Error details:', JSON.stringify(emailError, null, 2))
+      // Return error so you know something went wrong
+      return NextResponse.json(
+        { 
+          error: 'Failed to send email notification',
+          details: emailError?.message || 'Unknown error'
+        },
+        { status: 500 }
+      )
     }
 
     return NextResponse.json(

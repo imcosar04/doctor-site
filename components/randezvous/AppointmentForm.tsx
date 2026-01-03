@@ -15,6 +15,7 @@ export default function AppointmentForm() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState<string>('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -39,6 +40,7 @@ export default function AppointmentForm() {
 
       if (response.ok) {
         setSubmitStatus('success')
+        setErrorMessage('')
         setFormData({
           firstName: '',
           lastName: '',
@@ -47,10 +49,13 @@ export default function AppointmentForm() {
           message: '',
         })
       } else {
+        const errorData = await response.json().catch(() => ({}))
         setSubmitStatus('error')
+        setErrorMessage(errorData.error || errorData.details || 'Failed to submit consultation request')
       }
     } catch (error) {
       setSubmitStatus('error')
+      setErrorMessage('Network error. Please check your connection and try again.')
     } finally {
       setIsSubmitting(false)
     }
@@ -112,7 +117,8 @@ export default function AppointmentForm() {
 
       {submitStatus === 'error' && (
         <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
-          There was an error submitting your request. Please try again or contact us directly.
+          <p className="font-semibold mb-1">Error submitting your request</p>
+          <p className="text-sm">{errorMessage || 'Please try again or contact us directly.'}</p>
         </div>
       )}
 

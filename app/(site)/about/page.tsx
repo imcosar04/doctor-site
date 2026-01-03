@@ -1,10 +1,123 @@
+'use client'
+
 import Image from 'next/image'
 import Container from '@/components/layout/Container'
+import { useState } from 'react'
 
 export default function AboutPage() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const publications = [
+    {
+      authors: 'Marotta N, Cosar M, Pimenta L, Khoo LT',
+      title: 'A Novel Minimally-Invasive Presacral Approach and Instrumentation Technique for L5-S1 Interbody Arthrodesis',
+      description: 'Technical note describing a new minimally invasive approach for lumbar fusion surgery.',
+      journal: 'Journal of Neurosurgery: Spine'
+    },
+    {
+      authors: 'Cosar M, Iplikcioglu AC, Bek S, Gokduman CA',
+      title: 'Intracranial Falcine and Convexity Chondromas',
+      description: 'Case series and review of rare intracranial chondromas with clinical and radiological features.',
+      journal: 'British Journal of Neurosurgery, 2005'
+    },
+    {
+      authors: 'Bikmaz K, Cosar M, Iplikcioglu AC, Dinc C, Hatiboglu MA',
+      title: 'Spontaneous Cerebrospinal Fluid Rhinorrhoea Due to Temporosphenoidal Encephalocele',
+      description: 'Clinical case report of spontaneous CSF leak management and surgical repair.',
+      journal: 'Journal of Clinical Neuroscience, 2005'
+    },
+    {
+      authors: 'Hatiboglu MA, Cosar M, Iplikcioglu AC, Ozcan D',
+      title: 'Brain Metastasis from Adenoid Cystic Carcinoma of Bartholin\'s Gland',
+      description: 'Rare case report of metastatic brain tumor with clinical presentation and management.',
+      journal: 'Journal of Neurosurgery, 2005'
+    },
+    {
+      authors: 'Bikmaz K, Cosar M, Bek S, Gokduman CA, Arslan M, Iplikcioglu AC',
+      title: 'Intradiploic Epidermoid Cysts of the Skull: A Report of Four Cases',
+      description: 'Case series of rare skull lesions with imaging characteristics and surgical outcomes.',
+      journal: 'Clinical Neurology and Neurosurgery, 2005'
+    },
+    {
+      authors: 'Erdal M, Iplikcioglu AC, Bikmaz K, Cosar M',
+      title: 'Dandy-Walker Complex and Syringomyelia in an Adult: Case Report and Discussion',
+      description: 'Complex case of congenital malformation with associated syringomyelia and management approach.',
+      journal: 'Neurosurgery, 2003'
+    },
+    {
+      authors: 'Bikmaz K, Cosar M, Iplikcioglu AC',
+      title: 'Non-traumatic Multisegmental Intraspinal and Infratentorial Haemorrhage in a Haemophilia-A Patient',
+      description: 'Case report of rare bleeding complications in hemophilia patient with spinal and intracranial involvement.',
+      journal: 'British Journal of Neurosurgery, 2005'
+    },
+    {
+      authors: 'Bikmaz K, Cosar M, Kurtkaya-Yapicier O, Iplikcioglu AC, Gokduman CA',
+      title: 'Recurrence of Solitary Fibrous Tumor in Cerebellopontine Angle',
+      description: 'Case report of recurrent rare tumor in posterior fossa with surgical management and follow-up.',
+      journal: 'Journal of Clinical Neuroscience, 2005'
+    },
+    {
+      authors: 'Gokduman CA, Iplikcioglu AC, Kuzdere M, Bek S, Cosar M',
+      title: 'Primary Meningioma of the Paranasal Sinus',
+      description: 'Rare case of primary meningioma in paranasal sinus with clinical presentation and surgical approach.',
+      journal: 'Journal of Clinical Neuroscience, 2005'
+    },
+    {
+      authors: 'Cosar M, Iplikcioglu AC, Ozer-Kartal N, Aytan N, San T, Deniz O, Ozer AF',
+      title: 'The Effect of Temporary Aneurysm Clip on the Common Carotid Artery of Atherosclerotic Rabbits',
+      description: 'Experimental study examining the effects of temporary clipping on atherosclerotic vessels.',
+      journal: 'Turkish Neurosurgery Society 20th Scientific Congress, 2006'
+    },
+    {
+      authors: 'Cosar M, Ozen OA, Sahin O, Fidan H, Eser O, Mollaoglu H, Alkoc O, Yaman M, Songur A',
+      title: 'Protective Effect of Fish n-3 Free Fatty Acids on Cerebral Ischemia in Rat Prefrontal Cortex',
+      description: 'Experimental research on neuroprotective effects of omega-3 fatty acids in cerebral ischemia models.',
+      journal: 'Turkish Neurosurgery Society 22nd Scientific Congress, 2008'
+    },
+    {
+      authors: 'Cosar M, Erdogan M, Eser O, Eser B, Aslan A, Handan Y, Korkmaz S, Yavas GF, Solak M',
+      title: 'Analysis of C677T MTHFR, A1298C MTHFR and Factor V Leiden Gene Polymorphisms in Pseudotumor Cerebri Patients',
+      description: 'Genetic association study examining polymorphisms in patients with idiopathic intracranial hypertension.',
+      journal: 'Turkish Neurosurgery Society 22nd Scientific Congress, 2008'
+    },
+    {
+      authors: 'Eser O, Fidan H, Sahin O, Cosar M, Yaman M, Mollaoglu H, Songur A, Buyukbas S',
+      title: 'Effect of Dexmedetomidine on Ischemic Rat Hippocampus',
+      description: 'Experimental study investigating the neuroprotective properties of dexmedetomidine in hippocampal ischemia.',
+      journal: 'Turkish Neurosurgery Society 22nd Scientific Congress, 2008'
+    },
+    {
+      authors: 'Yuksel Y, Guven M, Kaymaz B, Cosar M',
+      title: 'The Effect of Aloe Vera on Spinal Cord Ischemia-Reperfusion Injury in Rats',
+      description: 'Experimental research on potential therapeutic effects of aloe vera in spinal cord injury models.',
+      journal: 'Turkish Neurosurgery Society 30th Scientific Congress, 2015'
+    },
+    {
+      authors: 'Sehitoglu MH, Guven M, Yuksel M, Cosar M',
+      title: 'The Effect of Glycyrrhizic Acid on Traumatic Spinal Cord Injury in Rats',
+      description: 'Preclinical study examining neuroprotective effects of glycyrrhizic acid in spinal cord trauma.',
+      journal: 'Turkish Neurosurgery Society 30th Scientific Congress, 2015'
+    }
+  ]
+
+  const slidesPerView = 3
+  const totalSlides = Math.ceil(publications.length / slidesPerView)
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
+  }
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index)
+  }
   return (
-    <Container>
-      <div className="py-12">
+    <>
+      <Container>
+        <div className="py-12">
         {/* Header Image */}
         <div className="relative w-full h-64 md:h-80 mb-12 overflow-hidden border-2 border-blue-400 rounded-lg">
           <Image
@@ -111,5 +224,115 @@ export default function AboutPage() {
         </div>
       </div>
     </Container>
+
+    {/* Publications Section - Outside Container for Full Width */}
+    <div className="mt-20 relative w-full pt-16 pb-0 px-4 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/doctor/doctor_writing_something_down.jpg"
+              alt="Doctor writing"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          {/* Purple Overlay */}
+          <div 
+            className="absolute inset-0 z-0"
+            style={{ 
+              backgroundColor: 'rgba(139, 92, 246, 0.5)',
+              background: 'linear-gradient(135deg, rgba(167, 139, 250, 0.6) 0%, rgba(139, 92, 246, 0.6) 100%)'
+            }}
+          />
+          {/* Content */}
+          <div className="relative z-10 w-full px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center uppercase tracking-wide" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '0.05em' }}>
+              Publications in Internationally Assessed Journals
+            </h2>
+            
+            {/* Carousel Container */}
+            <div className="relative max-w-7xl mx-auto">
+              {/* Navigation Arrow - Left */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors"
+                aria-label="Previous slide"
+              >
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              {/* Carousel */}
+              <div className="overflow-hidden px-12">
+                <div 
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ width: `${totalSlides * 100}%`, transform: `translateX(-${currentSlide * (100 / totalSlides)}%)` }}
+                >
+                  {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+                    <div key={slideIndex} className="flex w-full" style={{ width: `${100 / totalSlides}%` }}>
+                      {publications.slice(slideIndex * slidesPerView, slideIndex * slidesPerView + slidesPerView).map((pub, pubIndex) => (
+                        <div
+                          key={slideIndex * slidesPerView + pubIndex}
+                          className="flex-shrink-0 w-1/3 px-3"
+                        >
+                          <div className="bg-white rounded-lg p-8 h-[450px] shadow-lg flex flex-col transition-transform duration-300 hover:scale-105 cursor-pointer">
+                            <p className="text-sm text-gray-600 font-medium mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
+                              {pub.authors}
+                            </p>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex-grow" style={{ fontFamily: "'Inter', sans-serif" }}>
+                              {pub.title}
+                            </h3>
+                            <p className="text-sm text-gray-700 mb-4" style={{ fontFamily: "'Crimson Text', serif" }}>
+                              {pub.description}
+                            </p>
+                            <p className="text-xs text-gray-500 italic mt-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
+                              {pub.journal}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Navigation Arrow - Right */}
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors"
+                aria-label="Next slide"
+              >
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Pagination Dots */}
+            <div className="flex justify-center items-center gap-2 mt-8">
+              {Array.from({ length: totalSlides }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    currentSlide === index
+                      ? 'bg-white w-8'
+                      : 'bg-white/50 hover:bg-white/75'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+            
+            <div className="text-center mt-12 mb-8">
+              <p className="text-white/90" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Dr. Cosar has published over 100 international scientific articles and authored three editions of books on neurosurgical spine surgery.
+              </p>
+            </div>
+          </div>
+        </div>
+    </>
   )
 }
