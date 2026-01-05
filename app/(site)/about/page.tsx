@@ -247,7 +247,7 @@ export default function AboutPage() {
           />
           {/* Content */}
           <div className="relative z-10 w-full px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center uppercase tracking-wide" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '0.05em' }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center uppercase tracking-normal" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '0.02em' }}>
               Publications in Internationally Assessed Journals
             </h2>
             

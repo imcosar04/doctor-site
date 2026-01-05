@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
@@ -26,21 +25,25 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Bar - Logo and Schedule Button (Static) */}
-      <div className="bg-gray-50 border-b-2 border-gray-200">
+      {/* Top Bar - Logo and Schedule Button (Fixed) */}
+      <div className="bg-gray-50 border-b-2 border-gray-200 fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-3">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
-                <Image
-                  src="/images/logos/MuratCosarPhysician.png"
-                  alt="Dr. Murat Cosar Physician Logo"
-                  width={300}
-                  height={110}
-                  className="h-20 md:h-24 w-auto object-contain"
-                  priority
-                />
+              <Link href="/" className="flex flex-col hover:opacity-90 transition-opacity">
+                <div 
+                  className="text-lg md:text-xl font-bold text-black leading-tight tracking-tight"
+                  style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700 }}
+                >
+                  Murat Cosar MD PhD
+                </div>
+                <div 
+                  className="text-xs md:text-sm text-black mt-0.5 tracking-wide"
+                  style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}
+                >
+                  Neurosurgery/Spine
+                </div>
               </Link>
             </div>
 
@@ -57,10 +60,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Navigation Bar - Links (Sticky) */}
-      <nav className="bg-white border-b-2 border-blue-200 sticky top-0 z-50 shadow-sm">
+      {/* Navigation Bar - Links (Fixed) */}
+      <nav className="bg-white border-b-2 border-blue-200 fixed top-[70px] left-0 right-0 z-40 shadow-sm">
         <div className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
           <div className="flex justify-center items-center h-16">
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center">
@@ -144,6 +147,9 @@ export default function Navbar() {
         </div>
       )}
       </nav>
+      
+      {/* Spacer to prevent content from being hidden behind fixed navbars */}
+      <div className="h-[150px]"></div>
     </>
   )
 }
