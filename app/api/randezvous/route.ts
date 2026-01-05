@@ -38,9 +38,7 @@ export async function POST(request: NextRequest) {
       // For production, verify a domain at resend.com/domains and use that domain for 'from'
       const emailResult = await resend.emails.send({
         from: 'onboarding@resend.dev',
-        to: 'imcosar04@gmail.com', // Using your verified email for now
-        // CC the doctor's email so they also receive it
-        cc: 'cosarmd@gmail.com',
+        to: 'imcosar04@gmail.com', // Using your verified email (test mode restriction)
         subject: `New Consultation Request from ${firstName} ${lastName}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
