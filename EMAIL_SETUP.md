@@ -55,3 +55,4 @@ The email will include:
   3. Your Resend account is active
   4. Check the server console for any error messages
 
+

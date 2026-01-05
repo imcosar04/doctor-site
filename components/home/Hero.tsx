@@ -17,7 +17,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="#managements"
-                className="px-8 py-4 bg-yellow-400 text-gray-900 border-2 border-yellow-400 font-semibold hover:bg-yellow-500 transition-colors text-center"
+                className="px-8 py-4 bg-blue-600 text-white border-2 border-blue-600 font-semibold hover:bg-blue-700 transition-colors text-center"
               >
                 Insights on Treatment Procedures
               </Link>

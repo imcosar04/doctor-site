@@ -48,7 +48,7 @@ export default function Navbar() {
             <div className="flex items-center">
               <Link
                 href="#booking"
-                className="px-5 py-4 bg-yellow-400 text-gray-900 border-2 border-yellow-400 font-semibold hover:bg-yellow-500 transition-colors text-base"
+                className="px-5 py-4 bg-blue-600 text-white border-2 border-blue-600 font-semibold hover:bg-blue-700 transition-colors text-base"
               >
                 Schedule Consultation
               </Link>
@@ -136,7 +136,7 @@ export default function Navbar() {
             <Link
               href="#booking"
               onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 bg-yellow-400 text-gray-900 border-2 border-yellow-400 font-semibold hover:bg-yellow-500 transition-colors mt-2"
+              className="block px-3 py-2 bg-blue-600 text-white border-2 border-blue-600 font-semibold hover:bg-blue-700 transition-colors mt-2"
             >
               Schedule Consultation
             </Link>
