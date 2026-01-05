@@ -34,11 +34,10 @@ export async function POST(request: NextRequest) {
 
     try {
       const resend = new Resend(apiKey)
-      // Note: In test mode, Resend only allows sending to your verified email
-      // For production, verify a domain at resend.com/domains and use that domain for 'from'
+      // Note: Using the doctor's verified email address
       const emailResult = await resend.emails.send({
         from: 'onboarding@resend.dev',
-        to: 'imcosar04@gmail.com', // Using your verified email (test mode restriction)
+        to: 'cosarmd@gmail.com', // Doctor's verified email address
         subject: `New Consultation Request from ${firstName} ${lastName}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
