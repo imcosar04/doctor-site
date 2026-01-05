@@ -22,10 +22,17 @@ The consultation form is now configured to send emails to `cosarmd@gmail.com` wh
      ```
    - Replace `re_your_actual_api_key_here` with your actual API key
 
-4. **Verify your domain** (optional but recommended):
-   - For production, you'll want to verify your domain with Resend
-   - This allows you to send from your own domain (e.g., `noreply@yourdomain.com`)
-   - For now, the form will use Resend's default sender address
+4. **Verify your domain** (REQUIRED for production):
+   - Resend's test mode only allows sending to your verified email address
+   - To send to other recipients (like `cosarmd@gmail.com`), you MUST verify a domain
+   - Steps to verify:
+     1. Go to https://resend.com/domains
+     2. Click "Add Domain"
+     3. Enter your domain (e.g., `yourdomain.com`)
+     4. Add the DNS records Resend provides to your domain's DNS settings
+     5. Wait for verification (usually takes a few minutes)
+   - Once verified, update the `from` address in the API route to use your domain (e.g., `noreply@yourdomain.com`)
+   - **Note**: Currently, emails are sent to your verified email (`imcosar04@gmail.com`) with CC to the doctor's email as a temporary workaround
 
 5. **Restart your development server**:
    - Stop your current server (Ctrl+C)

@@ -34,9 +34,13 @@ export async function POST(request: NextRequest) {
 
     try {
       const resend = new Resend(apiKey)
+      // Note: In test mode, Resend only allows sending to your verified email
+      // For production, verify a domain at resend.com/domains and use that domain for 'from'
       const emailResult = await resend.emails.send({
         from: 'onboarding@resend.dev',
-        to: 'cosarmd@gmail.com',
+        to: 'imcosar04@gmail.com', // Using your verified email for now
+        // CC the doctor's email so they also receive it
+        cc: 'cosarmd@gmail.com',
         subject: `New Consultation Request from ${firstName} ${lastName}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -57,7 +61,32 @@ export async function POST(request: NextRequest) {
         reply_to: email,
       })
       
-      console.log('Email sent successfully:', emailResult)
+      console.log('Email send result:', JSON.stringify(emailResult, null, 2))
+      
+      // Check if the email was actually sent successfully
+      if (emailResult.error) {
+        console.error('Resend API returned an error:', emailResult.error)
+        return NextResponse.json(
+          { 
+            error: 'Failed to send email notification',
+            details: emailResult.error.message || 'Resend API returned an error'
+          },
+          { status: 500 }
+        )
+      }
+      
+      if (!emailResult.data || !emailResult.data.id) {
+        console.error('Unexpected email result format:', emailResult)
+        return NextResponse.json(
+          { 
+            error: 'Failed to send email notification',
+            details: 'Email service returned an unexpected response'
+          },
+          { status: 500 }
+        )
+      }
+      
+      console.log('Email sent successfully with ID:', emailResult.data.id)
     } catch (emailError: any) {
       console.error('Error sending email:', emailError)
       console.error('Error details:', JSON.stringify(emailError, null, 2))
@@ -65,7 +94,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { 
           error: 'Failed to send email notification',
-          details: emailError?.message || 'Unknown error'
+          details: emailError?.message || emailError?.toString() || 'Unknown error'
         },
         { status: 500 }
       )
