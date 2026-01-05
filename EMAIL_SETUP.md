@@ -47,12 +47,38 @@ The email will include:
 - Message (if provided)
 - Reply-to set to the patient's email for easy response
 
+## Vercel Deployment Setup
+
+If your site is deployed on Vercel, you need to add the environment variable there as well:
+
+1. **Go to your Vercel Dashboard**:
+   - Visit https://vercel.com/dashboard
+   - Select your project
+
+2. **Add Environment Variable**:
+   - Go to **Settings** → **Environment Variables**
+   - Click **Add New**
+   - **Name**: `RESEND_API_KEY`
+   - **Value**: `re_iGAJn6ku_4H9ehVrkkNc1mvegtL4kpJpk` (or your actual API key)
+   - Select **Production**, **Preview**, and **Development** environments
+   - Click **Save**
+
+3. **Redeploy**:
+   - After adding the environment variable, go to **Deployments**
+   - Click the three dots (⋯) on your latest deployment
+   - Select **Redeploy**
+   - This will trigger a new deployment with the environment variable
+
+**Important**: `.env.local` only works for local development. For Vercel, you must add the environment variable in the Vercel dashboard.
+
 ## Troubleshooting
 
 - If emails aren't sending, check:
-  1. Your `.env.local` file exists and has the correct API key
-  2. You've restarted your dev server after adding the API key
-  3. Your Resend account is active
-  4. Check the server console for any error messages
+  1. Your `.env.local` file exists and has the correct API key (for local development)
+  2. You've added `RESEND_API_KEY` in Vercel's Environment Variables (for production)
+  3. You've restarted your dev server after adding the API key (for local)
+  4. You've redeployed after adding the environment variable in Vercel (for production)
+  5. Your Resend account is active
+  6. Check the server console/Vercel logs for any error messages
 
 

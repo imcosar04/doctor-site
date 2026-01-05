@@ -50,7 +50,7 @@ export default function Navbar() {
             {/* Schedule Consultation Button */}
             <div className="flex items-center">
               <Link
-                href="#booking"
+                href="/patient-resources"
                 className="px-5 py-4 bg-blue-600 text-white border-2 border-blue-600 font-semibold hover:bg-blue-700 transition-colors text-base"
               >
                 Schedule Consultation
@@ -137,7 +137,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="#booking"
+              href="/patient-resources"
               onClick={() => setIsOpen(false)}
               className="block px-3 py-2 bg-blue-600 text-white border-2 border-blue-600 font-semibold hover:bg-blue-700 transition-colors mt-2"
             >

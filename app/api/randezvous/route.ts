@@ -19,11 +19,18 @@ export async function POST(request: NextRequest) {
     const apiKey = process.env.RESEND_API_KEY
     if (!apiKey) {
       console.error('RESEND_API_KEY is not set in environment variables')
+      console.error('Available env vars:', Object.keys(process.env).filter(key => key.includes('RESEND')))
       return NextResponse.json(
-        { error: 'Email service not configured' },
+        { 
+          error: 'Email service not configured',
+          details: 'RESEND_API_KEY environment variable is not set. Please check your Vercel environment variables.'
+        },
         { status: 500 }
       )
     }
+    
+    // Log that API key was found (but don't log the actual key for security)
+    console.log('RESEND_API_KEY found, length:', apiKey.length)
 
     try {
       const resend = new Resend(apiKey)
