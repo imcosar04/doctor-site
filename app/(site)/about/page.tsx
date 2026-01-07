@@ -9,22 +9,10 @@ export default function AboutPage() {
 
   const publications = [
     {
-      authors: 'Marotta N, Cosar M, Pimenta L, Khoo LT',
-      title: 'A Novel Minimally-Invasive Presacral Approach and Instrumentation Technique for L5-S1 Interbody Arthrodesis',
-      description: 'Technical note describing a new minimally invasive approach for lumbar fusion surgery.',
-      journal: 'Journal of Neurosurgery: Spine'
-    },
-    {
-      authors: 'Cosar M, Iplikcioglu AC, Bek S, Gokduman CA',
-      title: 'Intracranial Falcine and Convexity Chondromas',
-      description: 'Case series and review of rare intracranial chondromas with clinical and radiological features.',
-      journal: 'British Journal of Neurosurgery, 2005'
-    },
-    {
-      authors: 'Bikmaz K, Cosar M, Iplikcioglu AC, Dinc C, Hatiboglu MA',
-      title: 'Spontaneous Cerebrospinal Fluid Rhinorrhoea Due to Temporosphenoidal Encephalocele',
-      description: 'Clinical case report of spontaneous CSF leak management and surgical repair.',
-      journal: 'Journal of Clinical Neuroscience, 2005'
+      authors: 'Erdal M, Iplikcioglu AC, Bikmaz K, Cosar M',
+      title: 'Dandy-Walker Complex and Syringomyelia in an Adult: Case Report and Discussion',
+      description: 'Complex case of congenital malformation with associated syringomyelia and management approach.',
+      journal: 'Neurosurgery, 2003'
     },
     {
       authors: 'Hatiboglu MA, Cosar M, Iplikcioglu AC, Ozcan D',
@@ -39,16 +27,22 @@ export default function AboutPage() {
       journal: 'Clinical Neurology and Neurosurgery, 2005'
     },
     {
-      authors: 'Erdal M, Iplikcioglu AC, Bikmaz K, Cosar M',
-      title: 'Dandy-Walker Complex and Syringomyelia in an Adult: Case Report and Discussion',
-      description: 'Complex case of congenital malformation with associated syringomyelia and management approach.',
-      journal: 'Neurosurgery, 2003'
+      authors: 'Cosar M, Iplikcioglu AC, Bek S, Gokduman CA',
+      title: 'Intracranial Falcine and Convexity Chondromas',
+      description: 'Case series and review of rare intracranial chondromas with clinical and radiological features.',
+      journal: 'British Journal of Neurosurgery, 2005'
     },
     {
       authors: 'Bikmaz K, Cosar M, Iplikcioglu AC',
       title: 'Non-traumatic Multisegmental Intraspinal and Infratentorial Haemorrhage in a Haemophilia-A Patient',
       description: 'Case report of rare bleeding complications in hemophilia patient with spinal and intracranial involvement.',
       journal: 'British Journal of Neurosurgery, 2005'
+    },
+    {
+      authors: 'Bikmaz K, Cosar M, Iplikcioglu AC, Dinc C, Hatiboglu MA',
+      title: 'Spontaneous Cerebrospinal Fluid Rhinorrhoea Due to Temporosphenoidal Encephalocele',
+      description: 'Clinical case report of spontaneous CSF leak management and surgical repair.',
+      journal: 'Journal of Clinical Neuroscience, 2005'
     },
     {
       authors: 'Bikmaz K, Cosar M, Kurtkaya-Yapicier O, Iplikcioglu AC, Gokduman CA',
@@ -63,40 +57,136 @@ export default function AboutPage() {
       journal: 'Journal of Clinical Neuroscience, 2005'
     },
     {
-      authors: 'Cosar M, Iplikcioglu AC, Ozer-Kartal N, Aytan N, San T, Deniz O, Ozer AF',
+      authors: 'Marotta N, Cosar M, Pimenta L, Khoo LT',
+      title: 'A Novel Minimally-Invasive Presacral Approach and Instrumentation Technique for Anterior L5-S1 Intervertebral Discectomy and Fusion',
+      description: 'Technical note describing a new minimally invasive approach for lumbar fusion surgery.',
+      journal: 'Neurosurgical Focus, 2006'
+    },
+    {
+      authors: 'Iplikcioglu AC, Dinc C, Bikmaz K, Bek S, Gokduman CA, Cosar M',
+      title: 'Non-traumatic Intradiploic Arachnoid Cyst',
+      description: 'Case report of rare intradiploic arachnoid cyst with clinical presentation and surgical management.',
+      journal: 'Acta Neurochirurgica, 2006'
+    },
+    {
+      authors: 'Iplikcioglu AC, Bek S, Gokduman CA, Bikmaz K, Cosar M',
+      title: 'Diffuse Villous Hyperplasia of Choroid Plexus',
+      description: 'Case report of rare choroid plexus pathology with clinical and radiological features.',
+      journal: 'Acta Neurochirurgica, 2006'
+    },
+    {
+      authors: 'Cosar M, Hatiboglu MA, Iplikcioglu AC, Ozcan D',
+      title: 'Parasagittal Leptomeningeal Hemangioblastoma: Case Report',
+      description: 'Rare case of parasagittal hemangioblastoma with surgical management and outcomes.',
+      journal: 'Neurologia Medico-Chirurgica, 2006'
+    },
+    {
+      authors: 'Cosar M, Sasani M, Oktenoglu BT, Ozer AF',
+      title: 'Spinal Subdural Hematoma as a Rare Complication of Vertebroplasty: Report of Two Cases',
+      description: 'Case series describing rare complication of vertebroplasty with management strategies.',
+      journal: 'World Spine Journal, 2006'
+    },
+    {
+      authors: 'Oktenoglu BT, Cosar M, Ozer AF, Iplikcioglu AC, Sasani M, Canbulat N, Bavbek C, Sarioglu AC',
+      title: 'Anterior Cervical Microdiscectomy With or Without Fusion',
+      description: 'Comparative study evaluating outcomes of anterior cervical discectomy with and without fusion.',
+      journal: 'Journal of Spinal Disorders & Techniques, 2007'
+    },
+    {
+      authors: 'Sasani M, Ozer AF, Oktenoglu BT, Cosar M, Kararslan E, Sarioglu AC',
+      title: 'Recurrent Radiculopathy Caused by Epidural Gas After Spinal Surgery: Report of 4 Cases and Literature Review',
+      description: 'Case series and literature review of rare complication of epidural gas causing recurrent symptoms.',
+      journal: 'Spine, 2007'
+    },
+    {
+      authors: 'Cosar M, Khoo LT, Yeung CA, Yeung AT',
+      title: 'A Comparison of the Degree of Lateral Recess and Foraminal Enlargement with Facet Preservation in the Treatment of Lumbar Stenosis',
+      description: 'Cadaver study comparing surgical techniques for lumbar stenosis treatment with facet preservation.',
+      journal: 'SAS Journal, 2007'
+    },
+    {
+      authors: 'Hatiboglu MA, Cosar M, Iplikcioglu AC, Ozcan D',
+      title: 'Sex Steroid and Epidermal Growth Factor Profile of Giant Meningiomas Associated with Pregnancy',
+      description: 'Study examining hormonal and growth factor profiles in pregnancy-associated meningiomas.',
+      journal: 'Surgical Neurology, 2008'
+    },
+    {
+      authors: 'Cosar M, Iplikcioglu AC, Aytan N, Ozcan D, San T, Kartal-Ozer N, Ozer AF',
       title: 'The Effect of Temporary Aneurysm Clip on the Common Carotid Artery of Atherosclerotic Rabbits',
       description: 'Experimental study examining the effects of temporary clipping on atherosclerotic vessels.',
-      journal: 'Turkish Neurosurgery Society 20th Scientific Congress, 2006'
+      journal: 'Surgical Neurology, 2008'
+    },
+    {
+      authors: 'Cosar M, Ozer AF, Iplikcioglu AC, Oktenoglu BT, Kosdere S, Sasani M, Bozkus H, Khoo LT, Sarioglu AC',
+      title: 'The Result of β-Tricalcium Phosphate Coated Hydroxyapatite (β-TCP/HA) Grafts for Interbody Fusion After Anterior Cervical Discectomy',
+      description: 'Clinical study evaluating outcomes of novel bone graft material in cervical fusion procedures.',
+      journal: 'Journal of Spinal Disorders & Techniques, 2008'
+    },
+    {
+      authors: 'Ozer AF, Oktenoglu BT, Cosar M, Sasani M, Sarioglu AC',
+      title: 'Long-Term Follow-Up after Open-Window Corpectomy in Patients with Advanced Cervical Spondylosis',
+      description: 'Long-term outcomes study of open-window corpectomy technique for advanced cervical pathology.',
+      journal: 'Journal of Spinal Disorders & Techniques, 2009'
+    },
+    {
+      authors: 'Ceylan D, Cosar M',
+      title: 'Migration of a Bullet in the Lumbar Intervertebral Disc Space Causing Back Pain: Case Report',
+      description: 'Rare case report of bullet migration causing lumbar disc pathology and management.',
+      journal: 'Neurologia Medico-Chirurgica, 2008'
     },
     {
       authors: 'Cosar M, Ozen OA, Sahin O, Fidan H, Eser O, Mollaoglu H, Alkoc O, Yaman M, Songur A',
-      title: 'Protective Effect of Fish n-3 Free Fatty Acids on Cerebral Ischemia in Rat Prefrontal Cortex',
+      title: 'The Protective Effect of Fish n-3 Fatty Acids on Cerebral Ischemia in Rat Prefrontal Cortex',
       description: 'Experimental research on neuroprotective effects of omega-3 fatty acids in cerebral ischemia models.',
-      journal: 'Turkish Neurosurgery Society 22nd Scientific Congress, 2008'
+      journal: 'Neurological Sciences, 2008'
     },
     {
-      authors: 'Cosar M, Erdogan M, Eser O, Eser B, Aslan A, Handan Y, Korkmaz S, Yavas GF, Solak M',
-      title: 'Analysis of C677T MTHFR, A1298C MTHFR and Factor V Leiden Gene Polymorphisms in Pseudotumor Cerebri Patients',
+      authors: 'Cosar M, Songur A, Sahin O, Uz E, Yilmaz R, Yagmurca M, Ozen OA',
+      title: 'The Neuroprotective Effect of Fish n-3 Fatty Acids in the Hippocampus of Diabetic Rats',
+      description: 'Experimental study investigating neuroprotective properties of omega-3 fatty acids in diabetic models.',
+      journal: 'Nutritional Neuroscience, 2008'
+    },
+    {
+      authors: 'Cosar M, Sasani M, Oktenoglu BT, Kaner T, Ercelen O, Kose KC, Ozer AF',
+      title: 'The Major Complications of Transpedicular Vertebroplasty',
+      description: 'Comprehensive review of complications associated with transpedicular vertebroplasty procedures.',
+      journal: 'Journal of Neurosurgery: Spine, 2009'
+    },
+    {
+      authors: 'Ozer AF, Kaner T, Sasani M, Oktenoglu BT, Cosar M',
+      title: 'Anterior Approach to Disc Herniation with Modified Anterior Microforaminotomy at C7-T2: Technical Note',
+      description: 'Technical note describing novel surgical approach for upper thoracic disc herniation.',
+      journal: 'Spine, 2009'
+    },
+    {
+      authors: 'Aslan A, Cemek M, Buyukokuroglu ME, Altunbas K, Bas O, Yurumez Y, Cosar M',
+      title: 'Dantrolene Can Reduce Secondary Damage After Spinal Cord Injury',
+      description: 'Experimental study examining neuroprotective effects of dantrolene in spinal cord injury models.',
+      journal: 'European Spine Journal, 2009'
+    },
+    {
+      authors: 'Cosar M, Seker A, Ceylan D, Tatarli N, Sahin F, Tokmak M, Songur A, Kilic T, Ozen OA',
+      title: 'Determining the Morphometry and Variations of the Confluens Sinuum and Related Structure via a Silicone Painting Technique',
+      description: 'Anatomic study examining variations in dural sinus anatomy using novel imaging technique.',
+      journal: 'Journal of Craniofacial Surgery, 2014'
+    },
+    {
+      authors: 'Cosar M, Eser B, Erdogan Ozdemir M, Eser O, Aslan A, Yildiz H, Korkmaz S, Yavas GF, Solak M',
+      title: 'The Analyses of C677T and A1298C Polymorphisms on the MTHFR Gene and Factor V Leiden Mutation in Pseudotumor Cerebri Patients',
       description: 'Genetic association study examining polymorphisms in patients with idiopathic intracranial hypertension.',
-      journal: 'Turkish Neurosurgery Society 22nd Scientific Congress, 2008'
+      journal: 'Gene Therapy and Molecular Biology, 2013'
     },
     {
-      authors: 'Eser O, Fidan H, Sahin O, Cosar M, Yaman M, Mollaoglu H, Songur A, Buyukbas S',
-      title: 'Effect of Dexmedetomidine on Ischemic Rat Hippocampus',
-      description: 'Experimental study investigating the neuroprotective properties of dexmedetomidine in hippocampal ischemia.',
-      journal: 'Turkish Neurosurgery Society 22nd Scientific Congress, 2008'
+      authors: 'Guven M, Aras AB, Topaloglu N, Ozkan A, Sen HM, Kalkan Y, Okuyucu A, Akbal A, Gokmen F, Cosar M',
+      title: 'The Protective Effect of Syringic Acid on Ischemia Injury in Rat Brain',
+      description: 'Experimental research on neuroprotective effects of syringic acid in cerebral ischemia models.',
+      journal: 'Turkish Journal of Medical Sciences, 2015'
     },
     {
-      authors: 'Yuksel Y, Guven M, Kaymaz B, Cosar M',
-      title: 'The Effect of Aloe Vera on Spinal Cord Ischemia-Reperfusion Injury in Rats',
-      description: 'Experimental research on potential therapeutic effects of aloe vera in spinal cord injury models.',
-      journal: 'Turkish Neurosurgery Society 30th Scientific Congress, 2015'
-    },
-    {
-      authors: 'Sehitoglu MH, Guven M, Yuksel M, Cosar M',
+      authors: 'Sehitoglu MH, Guven M, Yuksel Y, Cosar M',
       title: 'The Effect of Glycyrrhizic Acid on Traumatic Spinal Cord Injury in Rats',
       description: 'Preclinical study examining neuroprotective effects of glycyrrhizic acid in spinal cord trauma.',
-      journal: 'Turkish Neurosurgery Society 30th Scientific Congress, 2015'
+      journal: 'Cellular and Molecular Biology, 2016'
     }
   ]
 
@@ -271,20 +361,20 @@ export default function AboutPage() {
                   style={{ width: `${totalSlides * 100}%`, transform: `translateX(-${currentSlide * (100 / totalSlides)}%)` }}
                 >
                   {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-                    <div key={slideIndex} className="flex w-full" style={{ width: `${100 / totalSlides}%` }}>
+                    <div key={slideIndex} className="flex w-full flex-shrink-0" style={{ width: `${100 / totalSlides}%` }}>
                       {publications.slice(slideIndex * slidesPerView, slideIndex * slidesPerView + slidesPerView).map((pub, pubIndex) => (
                         <div
                           key={slideIndex * slidesPerView + pubIndex}
                           className="flex-shrink-0 w-1/3 px-3"
                         >
-                          <div className="bg-white rounded-lg p-8 h-[450px] shadow-lg flex flex-col transition-transform duration-300 hover:scale-105 cursor-pointer">
-                            <p className="text-sm text-gray-600 font-medium mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
+                          <div className="bg-white rounded-lg p-6 min-h-[320px] max-h-[380px] shadow-lg flex flex-col transition-transform duration-300 hover:scale-105 cursor-pointer">
+                            <p className="text-sm text-gray-600 font-medium mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
                               {pub.authors}
                             </p>
-                            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex-grow" style={{ fontFamily: "'Inter', sans-serif" }}>
+                            <h3 className="text-base font-semibold text-gray-900 mb-3 flex-grow" style={{ fontFamily: "'Inter', sans-serif" }}>
                               {pub.title}
                             </h3>
-                            <p className="text-sm text-gray-700 mb-4" style={{ fontFamily: "'Crimson Text', serif" }}>
+                            <p className="text-sm text-gray-700 mb-3 line-clamp-3" style={{ fontFamily: "'Crimson Text', serif" }}>
                               {pub.description}
                             </p>
                             <p className="text-xs text-gray-500 italic mt-auto" style={{ fontFamily: "'Inter', sans-serif" }}>

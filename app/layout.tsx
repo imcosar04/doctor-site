@@ -4,6 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Dr. Murat Cosar - EuroHealth',
   description: 'Expert medical care with innovative techniques and compassionate service by Dr. Murat Cosar',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
